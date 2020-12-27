@@ -10,8 +10,10 @@ Topics are inspired from official ROSALIND problem collection [here](http://rosa
 #### HAMM
 
 ```python
-
+def dH(s : str, t : str) -> int : 
+    return sum([pos1 != pos1prime for pos1, pos1prime in zip(s,t)])
 ```
+
 ####
 
 ### Combinatorics
