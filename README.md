@@ -9,6 +9,10 @@ Topics are inspired from official ROSALIND problem collection [here](http://rosa
 
 #### HAMM
 
+- Counting point mutations, The Hamming Distance <img src="https://render.githubusercontent.com/render/math?math=d_H(s,t)">
+
+- Python :
+  
 ```python
 def dH(s : str, t : str) -> int : 
     return sum([pos1 != pos1prime for pos1, pos1prime in zip(s,t)])
