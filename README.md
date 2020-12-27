@@ -7,18 +7,44 @@ Topics are inspired from official ROSALIND problem collection [here](http://rosa
 
 ### Alignement
 
-#### HAMM
+#### HAMM - Counting point mutations
 
-- Counting point mutations, The Hamming Distance <img src="https://render.githubusercontent.com/render/math?math=d_H(s,t)">
+- The Hamming Distance <img src="https://render.githubusercontent.com/render/math?math=d_H(s,t)">
 
-- Python :
+- with Python :
   
 ```python
-def dH(s : str, t : str) -> int : 
-    return sum([pos1 != pos1prime for pos1, pos1prime in zip(s,t)])
+def dH(s: str, t: str) -> int : 
+    return sum([pos != pos_prime for pos, pos_prime in zip(s,t)])
 ```
 
-####
+#### TRAN -  Transitions and Transversions
+
+- The Transition/Transversion Ratio <img src="https://render.githubusercontent.com/render/math?math=R(s_1,s_2)">
+
+- with Python :
+  
+```python
+from itertools import permutations
+
+def R(s1: str, s2: str) -> int : 
+
+    transitions = set(
+        [("A","G"), ("G","A"), ("C","T"), ("T","C")]
+        ) # all possible transitions
+    transversions = set(
+        permutations(["A","G","C","T"],2)
+        ) - transitions  # all possible transversions
+
+    n_trans, n_tranv = 0, 0
+    for pos, pos_prime in zip(s1_ex, s2_ex) :
+        if pos != pos_prime : 
+            if (pos,pos_prime) in transitions :
+                n_trans += 1
+            elif (pos,pos_prime) in transversions : 
+                n_tranv += 1
+    return n_trans/n_tranv
+```
 
 ### Combinatorics
 

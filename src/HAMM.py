@@ -1,5 +1,5 @@
-def dH(s : str, t : str) -> int : 
-    return sum([pos1 != pos1prime for pos1, pos1prime in zip(s,t)])
+def dH(s: str, t: str) -> int : 
+    return sum([pos != pos_prime for pos, pos_prime in zip(s,t)])
 
 # Test 
 s_ex = "GAGCCTACTAACGGGAT"
