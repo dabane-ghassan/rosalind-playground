@@ -3,7 +3,7 @@ My personal ROSALIND playground to practice some bioinformatics problems during 
 
 ## Topics
 
-Topics are inspired from official ROSALIND problem collection [here](http://rosalind.info/problems/topics/).
+Topics are taken from the official ROSALIND problem collection [here](http://rosalind.info/problems/topics/).
 
 ### Alignement
 
